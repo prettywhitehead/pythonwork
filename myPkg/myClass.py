@@ -63,6 +63,13 @@ class myDict(dict):
               return res
        else:
           myUtil.warn('There is no overlapping part of these two dicts')
+   
+   def remove(self, other):
+       """
+       remove the item in a dict
+       """
+       for k in other.keys():
+           self.pop(k,None)
 
 if __name__ == '__main__':
    x = myList([1,2,3,4])

@@ -32,6 +32,7 @@ done
 if [[ $skip -eq 0 ]] 
 then
 printf "Building Python Virtual ENV with python version $v ...\n"
+
 #virtualenv -p  /usr/bin/python$v  --system-site-packages $curDir/virtualenv
 virtualenv -p  /usr/local/bin/python$v  --system-site-packages $curDir/virtualenv
 . $curDir/virtualenv/bin/activate

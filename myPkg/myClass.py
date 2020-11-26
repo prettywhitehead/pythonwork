@@ -71,6 +71,25 @@ class myDict(dict):
        for k in other.keys():
            self.pop(k,None)
 
+class myString(str):
+   """
+   This is a customized str.
+   myString is an immutable object
+   """
+
+   def __init__(self,other): # Constructor
+       str.__init__(other)
+   
+   def intersect(self, other):  
+       ss = self.upper()
+       sss = other.upper()
+       ssL = ss.split(' ')
+       sssL = sss.split(' ')
+       ssS = set(ssL)
+       sssS =set(sssL)
+       L =  list( ssS & sssS)
+       return ' '.join(L)
+
 if __name__ == '__main__':
    x = myList([1,2,3,4])
    y = myList([4,5,6,7])

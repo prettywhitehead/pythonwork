@@ -27,3 +27,4 @@ singledispatch==3.4.0.3
 chardet==3.0.4
 urllib3==1.23
 idna==2.7
+Django==2.2.17

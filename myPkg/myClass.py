@@ -90,6 +90,20 @@ class myString(str):
        L =  list( ssS & sssS)
        return ' '.join(L)
 
+class myTuple(tuple):
+   """
+   This is a customized tuple.
+   myTuple is an immutable object
+   """
+
+   def __init__(self,other): # Constructor
+       tuple.__init__(other)
+
+   def intersect(self, other):
+       sS = set(self)
+       ssS = set(other)
+       return tuple(sS & ssS)
+
 if __name__ == '__main__':
    x = myList([1,2,3,4])
    y = myList([4,5,6,7])

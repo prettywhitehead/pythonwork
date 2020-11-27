@@ -17,3 +17,9 @@ def emptyItem(I):
     else:
        return False
 
+def openFile( fileName, mode ):
+    try:
+        myFile = open( fileName, mode )
+        return myFile
+    except (Exception):
+        err('FileNotFoundError')

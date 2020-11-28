@@ -30,7 +30,7 @@ class myList(list):
 
    def __and__(self,other): return self.intersect(other)
    def __or__(self,other): return self.union(other)
-   def __repr__(self): return 'myList: ' + list.__repr__(self)
+   def __repr__(self): return list.__repr__(self)
 
 
 class myDict(dict):

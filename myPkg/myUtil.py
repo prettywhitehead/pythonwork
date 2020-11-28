@@ -49,5 +49,5 @@ def readFile(fileName):
          for line in myFile:
             L.append(line.rstrip().split())
          return L
-   except(Exception):
-      err('Errors occur !')
+   except(FileNotFoundError):
+      err('FileNotFound for read !')

@@ -4,7 +4,7 @@ function usage () { echo "BASIC USAGE: pythonSetup.bash -v|--version"
                     echo "Example: pythonSetup.bash using default version ||  pythonSetup.bash -v 2.7.10"
                   }
 
-v=2.7
+v=3.7.4
 skip=0
 curDir=`pwd`
 export PYTHON_PKG=/Users/josephwu/Downloads/PYTHON_PKG
@@ -34,7 +34,12 @@ then
 printf "Building Python Virtual ENV with python version $v ...\n"
 
 #virtualenv -p  /usr/bin/python$v  --system-site-packages $curDir/virtualenv
+if [ $v == "3.7.4" ]
+then
+python3 -m venv --system-site-packages $curDir/virtualenv
+else
 virtualenv -p  /usr/local/bin/python$v  --system-site-packages $curDir/virtualenv
+fi
 . $curDir/virtualenv/bin/activate
 pip install --no-index --find-links=$PYTHON_PKG \
             -r "reqPackage.txt"

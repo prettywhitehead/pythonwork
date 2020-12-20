@@ -2,7 +2,7 @@
 
 from __future__ import print_function # 2.X compatibility
 
-import myClass
+from myPkg import myClass
 
 def warn(S):
    myS = str(S)
